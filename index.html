@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OrdenaFix — Reparación y Mantenimiento de Ordenadores</title>
+  <meta name="description" content="OrdenaFix: reparación, mantenimiento y upgrades de ordenadores. Servicio rápido y profesional en tu ciudad." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Intro overlay: Typewriter "ORDENAFIX" -->
+  <div id="intro-overlay" aria-hidden="true">
+    <div class="intro-typewriter" role="img" aria-label="Intro OrdenaFix">
+      <div class="typewrap">
+        <span id="type-text" aria-hidden="true"></span><span class="cursor" aria-hidden="true">|</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Canvas de fondo interactivo -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Shapes decorativas -->
+  <div class="decor-shapes" aria-hidden="true">
+    <svg class="shape s1" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <path d="M10,30 C20,5 80,5 90,30 C100,55 70,90 50,85 C30,80 5,55 10,30z" fill="rgba(245,158,11,0.08)"/>
+    </svg>
+    <svg class="shape s2" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <circle cx="50" cy="50" r="45" fill="rgba(201,198,191,0.05)"/>
+    </svg>
+    <svg class="shape s3" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <rect x="5" y="5" width="90" height="90" rx="20" fill="rgba(255,255,255,0.03)"/>
+    </svg>
+  </div>
+
+  <!-- Header actualizado -->
+  <header class="site-header">
+    <div class="container header-inner header--large">
+      <div class="brand brand--large">
+        <div class="logo-badge" tabindex="0" aria-hidden="true">
+          <img src="/images/imagen_circular_recortada.png" alt="Logo OrdenaFix" class="logo logo--large" />
+        </div>
+        <div class="brand-text">
+          <h1 class="brand-title">OrdenaFix</h1>
+          <p class="tagline">Reparación, mantenimiento y upgrades de ordenadores</p>
+        </div>
+      </div>
+
+      <nav class="main-nav" id="nav">
+        <a href="#services">Servicios</a>
+        <a href="#about">Sobre Nosotros</a>
+        <a href="#gallery">Galería</a>
+        <a href="#testimonials">Testimonios</a>
+        <a href="#contact">Contacto</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir navegación">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy glass-panel" data-parallax="-8">
+          <h2>Tu equipo como nuevo, rápido y seguro</h2>
+          <p>En OrdenaFix nos encargamos de la reparación, mantenimiento preventivo y upgrades para que tu ordenador rinda al máximo. Servicio técnico profesional con garantía.</p>
+          <p class="hero-cta">
+            <a class="btn" href="#contact">Solicitar presupuesto</a>
+            <a class="btn ghost" href="#services">Ver servicios</a>
+          </p>
+          <ul class="features">
+            <li>Diagnóstico sin compromiso</li>
+            <li>Repuestos originales y compatibles</li>
+            <li>Soporte post-servicio</li>
+          </ul>
+        </div>
+
+        <div class="hero-image" data-parallax="12">
+          <img src="images/decoration1.png" alt="Reparación de ordenador" />
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="container services">
+      <h3>Nuestros Servicios</h3>
+      <div class="cards">
+        <article class="card service-card glass">
+          <h4>Reparación de ordenadores</h4>
+          <p>Solución de averías, reparaciones de hardware, recuperación de datos y reparación de pantallas. Diagnóstico profesional y presupuesto claro.</p>
+        </article>
+        <article class="card service-card glass">
+          <h4>Mantenimiento y limpieza</h4>
+          <p>Mantenimiento preventivo, limpieza física y optimización del sistema.</p>
+        </article>
+        <article class="card service-card glass">
+          <h4>Upgrades y ampliaciones</h4>
+          <p>Actualización de RAM, SSD, GPU y migración de datos.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery" class="container gallery">
+      <h3>Galería de trabajos</h3>
+      <p class="muted">Pasa el ratón por encima de cada tarjeta para ver detalles del trabajo.</p>
+
+      <div class="gallery-grid">
+        <div class="card">
+          <img class="card-img" src="/images/work1.png" alt="Trabajo Refrigeración Líquida" />
+          <div class="card__content">
+            <h4 class="card__title">Refrigeración Líquida</h4>
+            <p class="card__description">Sistema líquido para enfriar el PC de forma más eficiente y silenciosa.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img" src="/images/work2.png" alt="Limpieza interna" />
+          <div class="card__content">
+            <h4 class="card__title">Limpieza interna</h4>
+            <p class="card__description">Limpieza de ventiladores, cambio de pasta térmica y test de temperaturas.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img" src="/images/work3.png" alt="Montaje de ordenadores" />
+          <div class="card__content">
+            <h4 class="card__title">Montaje de ordenadores</h4>
+            <p class="card__description">Ensamblaje limpio y optimizado, gestión de cables y pruebas de rendimiento.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img" src="/images/work4.png" alt="Proyecto especial" />
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2 L15 8 L22 9 L17 14 L18 21 L12 18 L6 21 L7 14 L2 9 L9 8 Z"></path>
+          </svg>
+          <div class="card__content">
+            <h4 class="card__title">Proyecto especial</h4>
+            <p class="card__description">Optimización y overclock para rendimiento gaming.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container about">
+      <h3>Sobre OrdenaFix</h3>
+      <p class="muted">Somos un taller técnico con experiencia en reparación y mantenimiento de ordenadores tanto para particulares como para empresas. Trabajamos con rapidez y transparencia.</p>
+      <div class="about-grid">
+        <div class="glass">
+          <h4>Profesionales certificados</h4>
+          <p>Técnicos formados y con experiencia en hardware y software. Tratamos tus datos con confidencialidad.</p>
+        </div>
+        <div class="glass">
+          <h4>Recogida y entrega</h4>
+          <p>Opciones de recogida y entrega a domicilio (en tu ciudad). Servicio express para casos urgentes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="container testimonials">
+      <h3>Testimonios</h3>
+      <div class="test-cards">
+        <blockquote class="test glass">
+          <p>"Me arreglaron el portátil en 24h y recuperaron mis archivos. Muy profesionales." — María R.</p>
+        </blockquote>
+        <blockquote class="test glass">
+          <p>"Subí a SSD y la diferencia es abismal. Recomendados." — Javier P.</p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Contact improved -->
+    <section id="contact" class="container contact">
+      <h3>Contacto</h3>
+      <p class="muted">Escríbenos o llámanos para pedir presupuesto o consultar disponibilidad. También puedes usar el formulario y te responderemos por email.</p>
+
+      <div class="contact-grid contact-grid--improved">
+        <aside class="contact-info glass" aria-label="Información de contacto">
+          <h4>Contacto rápido</h4>
+
+          <p><strong>Teléfono / WhatsApp:</strong><br>
+            <a class="contact-link" href="tel:+34123456789">+34 123 456 789</a></p>
+
+          <p><strong>Email:</strong><br>
+            <a class="contact-link" href="mailto:info@ordenafix.com">info@ordenafix.com</a></p>
+
+          <p><strong>Horario:</strong><br>
+            Lun–Vie 09:00–18:00</p>
+
+          <p><strong>Dirección:</strong><br>
+            Zona franca, Barcelona</p>
+
+          <p class="muted small">¿Prefieres presupuesto rápido por email?</p>
+          <p><a class="btn btn-small" href="mailto:info@ordenafix.com?subject=Presupuesto%20OrdenaFix">Pedir presupuesto</a></p>
+        </aside>
+
+        <form id="contactForm" class="contact-form glass" action="mailto:info@ordenafix.com" method="post" enctype="text/plain" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Nombre <span aria-hidden="true" class="required">*</span></label>
+              <input id="name" name="Nombre" type="text" autocomplete="name" required />
+            </div>
+
+            <div class="form-field">
+              <label for="phone">Teléfono</label>
+              <input id="phone" name="Teléfono" type="tel" inputmode="tel" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="email">Email <span aria-hidden="true" class="required">*</span></label>
+              <input id="email" name="Email" type="email" autocomplete="email" required />
+            </div>
+
+            <div class="form-field">
+              <label for="service">Servicio de interés</label>
+              <select id="service" name="Servicio" aria-label="Servicio de interés">
+                <option>Reparación</option>
+                <option>Mantenimiento</option>
+                <option>Upgrade</option>
+                <option>Otro</option>
+              </select>
+            </div>
+          </div>
+
+          <label for="message">Mensaje / Descripción del problema <span aria-hidden="true" class="required">*</span></label>
+          <textarea id="message" name="Mensaje" rows="6" required></textarea>
+
+          <div class="form-actions">
+            <button id="submitBtn" type="submit" class="btn">Enviar mensaje</button>
+            <button type="reset" class="btn ghost">Borrar</button>
+          </div>
+
+          <div id="formFeedback" role="status" aria-live="polite" class="form-feedback" hidden></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> OrdenaFix — Reparación y mantenimiento de ordenadores</p>
+      <p>Hecho con ❤️ por OrdenaFix</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
